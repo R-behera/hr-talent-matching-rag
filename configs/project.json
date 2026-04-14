@@ -1,0 +1,46 @@
+{
+  "slug": "hr-talent-matching-rag",
+  "title": "HR Talent Matching RAG",
+  "project_type": "rag",
+  "domain": "HRTech",
+  "summary": "Ground candidate-to-role matching on job requirements, resumes, and recruiter notes.",
+  "tags": [
+    "hr",
+    "matching",
+    "rag"
+  ],
+  "accent": "#2a9d8f",
+  "dashboard_metrics": [
+    {
+      "label": "Grounded Recall",
+      "value": "79%",
+      "delta": "+4.6%"
+    },
+    {
+      "label": "Citation Coverage",
+      "value": "89%",
+      "delta": "+3.1%"
+    },
+    {
+      "label": "Latency",
+      "value": "161ms",
+      "delta": "-18ms"
+    }
+  ],
+  "sample_features": {
+    "query": "Summarize the highest priority risk and recommended next step.",
+    "audience": "leadership"
+  },
+  "sample_metrics": {
+    "acquisition": 43.7,
+    "activation": 42.5,
+    "retention": 54.4,
+    "revenue": 88.9
+  },
+  "knowledge_base": [
+    "HR Talent Matching RAG is positioned as a HRTech starter that emphasizes fast iteration, clear documentation, and production-friendly interfaces.",
+    "The primary value proposition is: Ground candidate-to-role matching on job requirements, resumes, and recruiter notes.",
+    "Recommended operating model: ship a small API, add observability, validate outputs with stakeholder review, and monitor the top business KPI every week.",
+    "Typical stakeholders include analytics, operations, product, and leadership teams working on hr, matching, rag."
+  ]
+}
