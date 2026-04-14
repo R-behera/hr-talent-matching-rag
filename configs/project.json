@@ -9,7 +9,8 @@
     "matching",
     "rag"
   ],
-  "accent": "#2a9d8f",
+  "accent": "#2cc86a",
+  "secondary_accent": "#6b2ca9",
   "dashboard_metrics": [
     {
       "label": "Grounded Recall",
@@ -42,5 +43,52 @@
     "The primary value proposition is: Ground candidate-to-role matching on job requirements, resumes, and recruiter notes.",
     "Recommended operating model: ship a small API, add observability, validate outputs with stakeholder review, and monitor the top business KPI every week.",
     "Typical stakeholders include analytics, operations, product, and leadership teams working on hr, matching, rag."
+  ],
+  "app_archetype": "navigator",
+  "ui_profile": {
+    "layout": "horizon",
+    "surface": "paper",
+    "font_stack": "\"Plus Jakarta Sans\", \"Segoe UI\", sans-serif",
+    "radius": 24,
+    "shadow": 62,
+    "eyebrow_style": "soft",
+    "module_columns": 3,
+    "hero_align": "split",
+    "headline_mode": "compact"
+  },
+  "app_modules": [
+    {
+      "label": "Query 01",
+      "title": "Grounded Question",
+      "description": "Ask a domain question and retrieve the most relevant context from the local knowledge base.",
+      "endpoint": "/query",
+      "input_mode": "text",
+      "cta": "Search Context",
+      "prefill": "What is the top priority recommendation for HR Talent Matching RAG?",
+      "hint": "Grounded answer and supporting contexts will appear here.",
+      "span": "wide"
+    },
+    {
+      "label": "Query 02",
+      "title": "Retrieval Quality Review",
+      "description": "Compare retrieval-side metrics against a baseline before changing prompt or chunking strategy.",
+      "endpoint": "/analyze",
+      "input_mode": "json",
+      "cta": "Review Quality",
+      "prefill": "{\n  \"metrics\": {\n    \"acquisition\": 43.7,\n    \"activation\": 42.5,\n    \"retention\": 54.4,\n    \"revenue\": 88.9\n  },\n  \"baseline\": {\n    \"acquisition\": 40.2,\n    \"activation\": 39.1,\n    \"retention\": 50.05,\n    \"revenue\": 81.79\n  }\n}",
+      "hint": "Quality delta summary will appear here.",
+      "span": "normal"
+    },
+    {
+      "label": "Query 03",
+      "title": "Response Playbook",
+      "description": "Generate a recommended follow-up workflow grounded in the project context.",
+      "endpoint": "/recommend",
+      "input_mode": "json",
+      "cta": "Build Response",
+      "prefill": "{\n  \"prompt\": \"Recommend the next best action for HR Talent Matching RAG.\",\n  \"features\": {\n    \"query\": \"Summarize the highest priority risk and recommended next step.\",\n    \"audience\": \"leadership\"\n  },\n  \"metrics\": {\n    \"acquisition\": 43.7,\n    \"activation\": 42.5,\n    \"retention\": 54.4,\n    \"revenue\": 88.9\n  }\n}",
+      "hint": "Recommended workflow steps will appear here.",
+      "span": "normal"
+    }
   ]
 }
